@@ -16,13 +16,12 @@ glimpse(dsmall)
 # properties that affect the way observations are displayed. Each aesthetic is
 # controlled by a scale
 
-##################################
-# Practical plotting using qplot##
-##################################
+# This script is a birds eye view of plot types possible with ggplot2
+# Not to be taken seriously
 
-# What is overplotting? How to display using transparency? Why is this not an 
-# aesthetic?
-# Plots like the following tell us where most of the data lies
+##################################
+# Practical plotting using qplot #
+##################################
 
 attach(diamonds)
 qplot(carat, price)
@@ -55,3 +54,33 @@ qplot(color, price/carat, data = diamonds, geom = "jitter", alpha = I(1/100))
 # Histograms and densities
 
 qplot(carat, data = diamonds, geom = "histogram")
+qplot(carat, data = diamonds, geom = "density")
+qplot(color, data = diamonds, geom = "bar")
+
+# Compare distributions of subgroups
+qplot(carat, data = diamonds, geom = "density", colour = color)
+qplot(carat, data = diamonds, geom = "histogram", fill = color)
+qplot(color, data = diamonds, geom = "bar", weight = carat) +
+  scale_y_continuous("carat")
+
+# Line plots
+# Think what the geometry "line" means?
+
+qplot(date, unemploy/pop, data = economics, geom = "line")
+qplot(date, uempmed, data = economics, geom = "line")
+
+# Faceting, employs formulas row_var ~ col_var, say what?
+
+qplot(carat, data = diamonds, facets = color ~ ., 
+      geom = "histogram", binwidth = 0.1)
+qplot(carat, ..density.., data = diamonds, facets = color ~ ., 
+      geom = "histogram", binwidth = 0.1)
+
+# Axis labels, etc
+qplot(carat, price/carat, data = dsmall,
+      ylab = expression(frac(price, carat)),
+      xlab = "Weight (carats)",
+      main = "Small diamonds",
+      xlim = c(0.2, 1))
+
+qplot(carat, price, data = dsmall, log = "xy")
