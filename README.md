@@ -14,4 +14,4 @@ The scripts are arranged as follows (following the organization of the book):
 - [The grammar of ggplot2](TheGrammar.md)
 - [A layered approach to plotting](PeelTheOnion.md)
 - [Quick overview of layer options](PlotTools.md)
-- [Scales and Legends]()
+- [Scales and Legends](ScalesandLegends.md)
