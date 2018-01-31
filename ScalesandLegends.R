@@ -1,8 +1,8 @@
 #' ---
 #' title: "Scales and Legends"
 #' author: "Pavan Gurazada"
-#' date: "January 2018"
-#' output: html_document
+#' date: "`r format(Sys.Date())`"
+#' output: github_document
 #' ---
 
 library(tidyverse)

@@ -3,8 +3,6 @@
 #' author: "Pavan Gurazada"
 #' date: "`r format(Sys.Date())`"
 #' output: github_document
-#' out_width: 2
-#' out_height: 2
 #' ---
 
 

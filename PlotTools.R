@@ -1,18 +1,17 @@
 #' ---
 #' title: "An overview of layer options for ggplot2"
 #' author: "Pavan Gurazada"
-#' date: "January 2018"
-#' output: html_document
+#' date: "`r format(Sys.Date())`"
+#' output: github_document
 #' ---
 
 library(tidyverse)
 
-#' Build the plot in layers; think of each layer carefully and what purpose it serves
-#' Is it to display the data (and let the viewer build conclusions), present statistical
-#' summaries, or add meta data?
+#' Build the plot in layers; think of each layer carefully and what purpose it
+#' serves Is it to display the data (and let the viewer build conclusions),
+#' present statistical summaries, or add meta data?
 
-# 1. OVERVIEW OF PLOT TYPES
-# -------------------------
+#' **1. OVERVIEW OF PLOT TYPES**
 
 df <- data.frame(x = c(3, 1, 5),
                  y = c(2, 4, 6), 
@@ -30,13 +29,12 @@ p + geom_area() + labs(title = "geom_area")
 p + geom_text() + labs(title = "geom_text")
 p + geom_tile() + labs(title = "geom_tile")
 
-# 2. DISPLAYING DISTRIBUTIONS
-# ---------------------------
-
-# Use histograms for 1d distributions. In my experience, density plots are a bit
-# misleading
-
-# What is the distribution of depth of diamonds?
+#' **2. DISPLAYING DISTRIBUTIONS**
+#'
+#' Use histograms for 1d distributions. In my experience, density plots are a
+#' bit misleading
+#' 
+#' *What is the distribution of depth of diamonds?*
 
 p <- ggplot(diamonds, aes(x = depth))
 
@@ -49,44 +47,46 @@ ggplot(mpg, aes(x = class, y = cty)) +
 ggplot(mpg, aes(x = class, y = drv)) +
   geom_jitter()
 
-# 3. OVERPLOTTING
-# ---------------
-
-# Too many data points overlaid on one another obscuring the actual data density
+#' **3. OVERPLOTTING**
+#'
+#' Too many data points overlaid on one another obscuring the actual data
+#' density
 
 df <- data.frame(x = rnorm(2000),
                  y = rnorm(2000))
 
-# One way to tackle it is to reduce the size of the geom point
+#' One way to tackle it is to reduce the size of the geom point
 
 p <- ggplot(df, aes(x, y))
 p + geom_point()
 p + geom_point(shape = 1)
 p + geom_point(shape = ".")
 
-# Another way is to control the transparency of the points. This is my preferred
+#' Another way is to control the transparency of the points. This is my
+#' preferred option
 
 p + geom_point(color = alpha("black", 1/3))
 p + geom_point(color = alpha("black", 1/5))
 p + geom_point(color = alpha("black", 1/20))
 
-# Discrete data can be handled with jitter
+#' Discrete data can be handled with jitter
+#'
+#' **4. DESCRIBING ESTIMATE UNCERTAINTY**
+#'
+#' Specific geoms tackle intervals to describe uncertainty
+#'
+#' Unfinished due to lack of good data to showcase, but geom_errorbar is
+#' extremely useful to highlight uncertainty
 
-# 4. DESCRIBING ESTIMATE UNCERTAINTY
-
-# Specific geoms tackle intervals to describe uncertainty
-
-# Unfinished due to lack of good data to showcase, but geom_errorbar is
-# extremely useful to highlight uncertainty
-
-# 5. ANNOTATION
+#' **5. ANNOTATION**
 
 p <- ggplot(economics, aes(x = date, y = unemploy)) +
       geom_line() +
       xlab("") +
       ylab("No. unemployed (1000s)")
 
-# We can annotate specific regions in a plot to highlight patterns
-# These regions can be composed from other data sets too!
+#' We can annotate specific regions in a plot to highlight patterns
+#'
+#' These regions can be composed from other data sets too!
 
 p + geom_vline(aes(xintercept = start), data = presidential)

@@ -3,8 +3,6 @@
 #' author: "Pavan Gurazada"
 #' date: "`r format(Sys.time())`"
 #' output: github_document
-#' out_width: 6
-#' out_height: 4
 #' ---
 
 library(tidyverse)

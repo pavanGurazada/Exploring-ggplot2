@@ -8,8 +8,10 @@ Obviously, pretty plots are not the end goal but "lickable" plots are an essenti
 
 The aim here is to rapidly run through Hadley Wickham's ggplot2 book, with a focus on learning the logic behind this awesome package.
 
-At present the scripts are:
+The scripts are arranged as follows (following the organization of the book):
 
 - [Overview of data visualization](DataVisOverview.md)
 - [The grammar of ggplot2](TheGrammar.md)
 - [A layered approach to plotting](PeelTheOnion.md)
+- [Quick overview of layer options](PlotTools.md)
+- [Scales and Legends]()
