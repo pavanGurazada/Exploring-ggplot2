@@ -15,3 +15,4 @@ The scripts are arranged as follows (following the organization of the book):
 - [A layered approach to plotting](PeelTheOnion.md)
 - [Quick overview of layer options](PlotTools.md)
 - [Scales and Legends](ScalesandLegends.md)
+- [Faceting](Facets.md)
