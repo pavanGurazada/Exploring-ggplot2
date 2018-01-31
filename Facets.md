@@ -11,7 +11,9 @@ library(tidyverse)
 
 The faceting system requires a variable selection to go on the two axes. The `row_vars ~ col_vars` specification allows the user to specify this requirement in a rather easy way.
 
-As can be seen from the following plots, faceting can be illuminating, and various specific subsets of the data can be explored for patterns in a rather easy way **1. Illustrating facet grids**
+As can be seen from the following plots, faceting can be illuminating, and various specific subsets of the data can be explored for patterns easily
+
+**1. Illustrating facet grids**
 
 ``` r
 ggplot(mpg, aes(x = cty, y = hwy)) +
@@ -83,4 +85,4 @@ ggplot(mpg, aes(x = cty, y = hwy)) +
 
 ![](Facets_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-A key question to ask while faceting is: Will any other method of visual grouping will be equally efficient in capturing the pattern in the data? Facets are good for overall differences, but not so much if we are chasing fine grained details. In my experience, faceting is a neat feature when we are presenting differences observed in the same model on different substrate datasets.
+A key question to ask while faceting is: Will any other method of visual grouping will be equally efficient in capturing the pattern in the data? Facets are good for overall differences, but not so much if we are chasing fine grained details. In my experience, faceting is a neat feature when we are presenting differences observed in the same model on different substrate datasets or different models on the same data set. The simpler the faceting variable, the better it is!
