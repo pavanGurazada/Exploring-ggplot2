@@ -3,8 +3,8 @@
 #' author: "Pavan Gurazada"
 #' date: "`r format(Sys.time())`"
 #' output: github_document
-#' fig_width: 6
-#' fig_height: 4
+#' out_width: 6
+#' out_height: 4
 #' ---
 
 library(tidyverse)
@@ -147,11 +147,11 @@ ggplot(diamonds, aes(x = carat)) +
 
 #' Plots should be carefully composed of layers; they can be intricately woven,
 #' but must paint a story that otherwise cannot be inferred from a table of the
-#' data
-
-#' Geoms can also be connected with other stats
-
-#' Three variations of the same histogram
+#' data.
+#'
+#' Geoms can also be connected with other stats.
+#'
+#' For instance, here are three variations of the same histogram.
 
 ggplot(diamonds, aes(x = carat)) +
   stat_bin(aes(ymax = ..count..), binwidth = 0.1, geom = "area") 
@@ -161,7 +161,7 @@ ggplot(diamonds, aes(x = carat)) +
            binwidth = 0.1, geom = "point", position = "identity") 
 
 #' **OXBOYS data -- Age and height of 26 boys were measured on 9 occasions**
-
+#'
 #' *How does the height of boys vary by age and subject?*
 
 model <- lmer(height ~ 1 + age + (age|Subject), data = Oxboys)
