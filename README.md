@@ -10,4 +10,4 @@ The aim here is to rapidly run through Hadley Wickham's ggplot2 book, with a foc
 
 At present the scripts are:
 
-[Overview of data visualization](DataVisOverview.html)
+[Overview of data visualization](DataVisOverview.md)
