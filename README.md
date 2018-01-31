@@ -2,7 +2,7 @@
 
 Here is a rapid exploration of data visualization using ggplot2.
 
-First think what is the best visualization to answer a specific question and then answer it with a pretty plot.
+The aim here is to present the best visualization to answer a specific question and to do so with a pretty plot.
 
 Obviously, pretty plots are not the end goal but "lickable" plots are an essential component of any good data presentation. 
 
@@ -10,4 +10,6 @@ The aim here is to rapidly run through Hadley Wickham's ggplot2 book, with a foc
 
 At present the scripts are:
 
-[Overview of data visualization](DataVisOverview.md)
+- [Overview of data visualization](DataVisOverview.md)
+- [The grammar of ggplot2](TheGrammar.md)
+- [A layered approach to plotting](PeelTheOnion.md)
