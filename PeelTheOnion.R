@@ -1,3 +1,10 @@
+#' ---
+#' title: "Building plots layer by layer"
+#' author: "Pavan Gurazada"
+#' date: "January 2018"
+#' output: html_document
+#' ---
+
 library(tidyverse)
 library(nlme)
 library(lme4)

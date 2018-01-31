@@ -1,8 +1,15 @@
+#' ---
+#' title: "An overview of layer options for ggplot2"
+#' author: "Pavan Gurazada"
+#' date: "January 2018"
+#' output: html_document
+#' ---
+
 library(tidyverse)
 
-# Build the plot in layers; think of each layer carefully and what purpose it serves
-# Is it to display the data (and let the viewer build conclusions), present statistical
-# summaries, or add meta data?
+#' Build the plot in layers; think of each layer carefully and what purpose it serves
+#' Is it to display the data (and let the viewer build conclusions), present statistical
+#' summaries, or add meta data?
 
 # 1. OVERVIEW OF PLOT TYPES
 # -------------------------

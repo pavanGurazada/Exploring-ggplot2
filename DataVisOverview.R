@@ -1,3 +1,11 @@
+#' ---
+#' title: "An overview of Data Visualization in R"
+#' author: "Pavan Gurazada"
+#' date: "January 2018"
+#' output: html_document
+#' ---
+
+
 library(tidyverse)
 
 set.seed(20130810)
