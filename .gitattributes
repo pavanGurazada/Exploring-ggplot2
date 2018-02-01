@@ -1,1 +1,2 @@
 *.R linguist-language=R
+notes/*.html linguist-detectable=false
