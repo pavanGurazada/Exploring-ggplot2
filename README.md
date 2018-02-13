@@ -10,9 +10,9 @@ The aim here is to rapidly run through Hadley Wickham's ggplot2 book, with a foc
 
 The scripts are arranged as follows (following the organization of the book):
 
-- [Overview of data visualization](notes/DataVisOverview.md)
-- [The grammar of ggplot2](notes/TheGrammar.md)
-- [A layered approach to plotting](notes/PeelTheOnion.md)
-- [Quick overview of layer options](notes/PlotTools.md)
-- [Scales and Legends](notes/ScalesandLegends.md)
-- [Faceting](notes/Facets.md)
+- [Overview of data visualization](DataVisOverview.md)
+- [The grammar of ggplot2](TheGrammar.md)
+- [A layered approach to plotting](PeelTheOnion.md)
+- [Quick overview of layer options](PlotTools.md)
+- [Scales and Legends](ScalesandLegends.md)
+- [Faceting](Facets.md)
