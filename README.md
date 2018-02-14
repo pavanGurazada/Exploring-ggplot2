@@ -16,3 +16,4 @@ The scripts are arranged as follows (following the organization of the book):
 - [Quick overview of layer options](PlotTools.md)
 - [Scales and Legends](ScalesandLegends.md)
 - [Faceting](Facets.md)
+- [Plotting graphs](PlottingGraphs.md)
